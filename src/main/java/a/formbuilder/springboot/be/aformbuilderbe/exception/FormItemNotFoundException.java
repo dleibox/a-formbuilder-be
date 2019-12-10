@@ -1,14 +1,15 @@
 package a.formbuilder.springboot.be.aformbuilderbe.exception;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ResponseStatus(value = HttpStatus.NOT_FOUND)
 public class FormItemNotFoundException extends Exception {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 7231425914707609166L;
+	private static final long serialVersionUID = 1L;
 
-	public FormItemNotFoundException(String string) {
-		super(string);
+	public FormItemNotFoundException(String message) {
+		super(message);
 	}
 
 }
